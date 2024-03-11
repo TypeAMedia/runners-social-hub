@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Social running hubs</title>
+
+  <link rel="stylesheet" href="https://use.typekit.net/lnt1yxc.css">
+  <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/themes/light.css" />
+
+  <link rel="stylesheet" href="./libs/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./libs/css/choices.min.css" />
+  <link rel="stylesheet" href="./styles/main.css" />
+</head>
+
+<body>
+  <div class="container main-container" id="root">
+    <div class="banner">
+      <div class="d-desktop">
+        <img src="./images/banner-image.jpg" alt="banner" class="banner-image" />
+        <div class="logo-runners">
+          <img src="./images/logo-runners.svg" alt="logo" />
+        </div>
+
+        <h1 class="main-title"> UK’s Most social running hubs</h1>
+        <div class="title"> We analysed running clubs, sports events, routes, and Instagram posts to uncover the most
+          social places in
+          the UK to run.</div>
+      </div>
+
+      <div class="mobile">
+        <img src="./images/mobile-banner.jpg" alt="banner" class="banner-image" />
+        <div class="logo-runners">
+          <img src="./images/logo-runners.svg" alt="logo" />
+        </div>
+        <h1 class="main-title"> UK’s Most <br /> social <br /> running hubs</h1>
+        <div class="title"> We analysed running clubs, sports events, routes, and Instagram posts to uncover the most
+          social places in
+          the UK to run.</div>
+      </div>
+
+      <div class="dropdown">
+        <select id="city_select">
+        </select>
+      </div>
+    </div>
+    <div class="content">
+      <div class="map-wrap">
+        <div id="map"></div>
+
+        <div class="btn-menu">
+          <button class="btn btn-rect" type="button" data-toggle="modal" data-target="#modal">
+            <img src="./images/rank-by.svg" />
+          </button>
+        </div>
+
+        <div class="btn-zooms">
+          <div class="mb-1">
+            <button class="btn btn-rect" id="zoom_in">
+              <img src="./images/zoom-in.svg" />
+            </button>
+          </div>
+
+          <div>
+            <button class="btn btn-rect" id="zoom_out">
+              <img src="./images/zoom-out.svg" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content position-relative" id="modal_content">
+        <button type="button" class="btn btn-close" data-toggle="modal" data-target="#modal" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path
+              d="M17.0451 2.08512L15.9151 0.955139L9.00025 7.87002L2.08537 0.955139L0.955383 2.08512L7.87026 9L0.955383 15.9149L2.08537 17.0449L9.00025 10.13L15.9151 17.0449L17.0451 15.9149L10.1302 9L17.0451 2.08512Z"
+              fill="#333333" />
+          </svg>
+        </button>
+
+        <div class="modal-heading">
+          <img src="/images/logo-shoe.svg" alt="logo" />
+          <h5 class="modal-title">
+            UK social <br /> running index </h5>
+          <div class="btns">
+            <button class="btn btn-round rank-btn btn-active" data-target="overall">Overall</button>
+            <button class="btn btn-round rank-btn" data-target="sport_events">Sports Events</button>
+            <button class="btn btn-round rank-btn" data-target="running_clubs">Running Clubs</button>
+            <button class="btn btn-round rank-btn" data-target="running_routes">Running Routes</button>
+            <button class="btn btn-round rank-btn" data-target="running_forum">Running Forum Posts</button>
+            <button class="btn btn-round rank-btn" data-target="instagram_hashtags">Instagram Hashtags</button>
+          </div>
+        </div>
+
+        <div class="modal-table">
+          <div class="table-desc">
+            <div class="table-desc-heading"></div>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table class="table" id="table">
+
+          </table>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
+
+  <script src="./libs/js/jquery.js"></script>
+  <script src="./libs/js/bootstrap.min.js"></script>
+
+  <script src="./libs/js/d3.v7.min.js"></script>
+  <script src="./libs/js/choices.min.js"></script>
+  <script src="./libs/js/topojson-client.min.js"></script>
+
+  <script src="./scripts/utils.js"></script>
+  <script src="./scripts/MercatorMap.js"></script>
+  <script src="./scripts/main.js"></script>
+</body>
+
+</html>
