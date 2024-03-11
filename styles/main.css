@@ -524,10 +524,7 @@ body {
   z-index: 1000;
 }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background-color: #00AFCA !important
-}
+
 
 .mobile {
   display: block;
@@ -545,7 +542,7 @@ body {
   }
 
   .modal-content {
-    /* padding: 16px; */
+    padding: 5px;
     width: 80%;
     border: none !important;
   }
@@ -610,9 +607,17 @@ body {
     width: 45% !important
   }
 
-  /* Track */
-  ::-webkit-scrollbar {
-    /* width: 12px; */
-    border-radius: 40px;
+  ::-webkit-scrollbar-thumb {
+    background-color: #00AFCA !important;
+    border-radius: 8px !important;
+    height: 5px !important
   }
+
+  ::-webkit-scrollbar {
+    width: 5px !important;
+    border-radius: 8px !important;
+    padding-right: 5px !important;
+    height: 5px !important;
+  }
+
 }
